@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float lado,area;
+    // Ingresar el valor del lado del cuadrado
+cout << "Ingrese el valor del lado del cuadrado: ";
+cin >> lado;
+
+// Calcular el area del cuadrado
+area = lado * lado;
+
+// Mostrar el resultado
+cout << "El area del cuadrado es: " << area << endl;
+
+return 0;
+
+}
