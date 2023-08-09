@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+        float Dato1, Dato2, Suma, Resta, Multiplicacion, Division;
+    cout<<"Dato1 :";
+     cin>>Dato1;
+     cout<<"Dato2 :";
+    cin>>Dato2;
+    
+    Suma=Dato1+Dato2; 
+     cout<<"La Suma es: "<<Suma<<endl;
+    Resta=Dato1-Dato2; 
+    cout<<"La Resta es: "<<Resta<<endl;
+    Multiplicacion=Dato1*Dato2;
+    cout<<"La Multiplicacion es: "<<Multiplicacion<<endl;
+    Division=Dato1/Dato2;
+    cout<<"La Division es: "<<Division<<endl;
+
+    return 0;
+}
