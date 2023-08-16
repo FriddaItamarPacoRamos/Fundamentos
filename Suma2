@@ -6,9 +6,9 @@ int main()
 {
 
     float Dato1, Dato2, Suma;
-    cout<<"Dato1 :";
+    cout<<"Ingresar el Dato1:";
     cin>>Dato1;
-    cout<<"Dato2 :";
+    cout<<"Ingresar el Dato2:";
     cin>>Dato2;
 
     Suma=Dato1+Dato2; 
