@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  float G, P, T,presupuesto;
+
+ cout<<"Ingrese el presupuesto:";
+ cin>>presupuesto;
+ G=presupuesto*0.20;
+ T=presupuesto*0.40;
+ P=presupuesto*0.40;
+ cout<<"El presupuesto de ginecologia es:"<<G<<endl;
+ cout<<"El presupuesto de ginecologia es:"<<T<<endl;
+ cout<<"El presupuesto de ginecologia es:"<<P<<endl;
+ 
+    return 0;
+}
