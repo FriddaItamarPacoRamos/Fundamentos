@@ -1,0 +1,19 @@
+//Ejercicio 3
+
+#include <iostream>
+using namespace std;
+int main() {
+	int N;
+	cout << "Ingrese un numero entero N: ";
+	cin >> N;
+
+	int suma = 0;
+
+	// suma de los cuadrados de los N 
+	for (int i = 1; i <= N; ++i) {
+		suma += i * i;
+	}
+	cout << "La suma de los cuadrados de los primeros " << N << " numeros enteros es: " << suma <<endl;
+	return 0;
+}
+
