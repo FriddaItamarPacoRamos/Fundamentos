@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+	float a, b, c, discriminante; 
+	cout<< "Ingresa a:" ;
+	cin>> a;
+	cout<< "Ingresa b:" ;
+	cin>> b;
+	cout << "Ingrese c: ";
+	cin >> c;
+	discriminante = pow(b,2) - 4 * a * c;
+	if (discriminante > 0) {
+		float raiz1 = (-b + sqrt(discriminante)) / (2 * a);
+		float raiz2 = (-b - sqrt(discriminante)) / (2 * a);
+		cout << "Las raices reales son: " << raiz1 << " y " << raiz2 << endl;
+	}
+	else {
+		cout << "No hay raices reales." << endl;
+	}
+	return 0;
+}
