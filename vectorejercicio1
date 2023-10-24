@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+void cargar( double a[], int t); 
+void mostrar( double a[],int  t);
+double max(double a[], int  t);
+int main() {
+    int n;
+    cout << "Ingrese el número de elementos en el vector: ";
+    cin >> n;
+    double arr[n];
+    cargar( arr, n);
+    cout << "El valor maximo en el vector es: " << max (arr, n) << endl;
+    return 0;
+}
+void cargar( double a[], int t){
+    cout << "Ingrese los elementos del vector: ";
+    for(int i = 0; i < t; i++) {
+        cin >> a[i];
+    }
+}
+void mostrar( double a[], int t){
+    for(int i=0; i<t; i++)
+    {cout<<a[i]<<endl;}
+}
+double max(double a[], int t){
+    double max = a[0];
+    for(int i = 1; i < t; i++) {
+        if(a[i] > max) {
+            max = a[i];
+        }
+}        return max;
+}
