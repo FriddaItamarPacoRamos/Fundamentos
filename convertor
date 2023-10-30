@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int segundos, horas, minutos, residuo;
+   cout<<"Ingresar cantidad de segundos a convertir: ";
+   cin>>segundos;
+   horas= segundos/3600;
+   residuo= segundos%3600;
+   minutos= residuo/60;
+   residuo= residuo%60;
+   cout<< "La conversion es: "<< horas << " hrs. " << minutos<< " min. " << residuo << "seg. ";
+
+   return 0;
+}
