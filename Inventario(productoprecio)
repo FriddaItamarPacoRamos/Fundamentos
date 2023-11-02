@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+const int MAX_PRODUCTOS = 100; // Máximo número de productos
+
+void cargarVentas(string productos[], double ventas[], int &n) {
+    cout << "Ingrese el número de productos vendidos: ";
+    cin >> n;
+
+    for (int i = 0; i < n; ++i) {
+        cout << "Ingrese el nombre del producto " << i + 1 << ": ";
+        cin >> productos[i];
+
+        cout << "Ingrese el monto de la venta para " << productos[i] << ": $";
+        cin >> ventas[i];
+    }
+}
+
+void mostrarVentas(const string productos[], const double ventas[], int n) {
+    cout << "Registro de ventas:" << endl;
+    for (int i = 0; i < n; ++i) {
+        cout << "Producto: " << productos[i] << ", Venta: $" << ventas[i] << endl;
+    }
+}
+
+double calcularVentasTotales(const double ventas[], int n) {
+    double total = 0;
+    for (int i = 0; i < n; ++i) {
+        total += ventas[i];
+    }
+    return total;
+}
+
+int main() {
+    string productos[MAX_PRODUCTOS];
+    double ventas[MAX_PRODUCTOS];
+    int n = 0; // Número de productos ingresados
+
+    cargarVentas(productos, ventas, n);
+    mostrarVentas(productos, ventas, n);
+
+    double ventasTotales = calcularVentasTotales(ventas, n);
+    cout << "Ventas totales realizadas: $" << ventasTotales << endl;
+
+    return 0;
+}
