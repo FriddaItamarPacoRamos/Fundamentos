@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+#include "Usuario.h"
+using namespace std;
+int main()
+{
+    string usuario, contrasenia;
+    Usuario usuario1("kinfantas", "mipassword");
+    cout << "Ingresar usuario: ";
+    cin >> usuario;
+    cout << "Ingresar password: ";
+    cin >> contrasenia;
+    if (usuario1.Verificarlogin(usuario, contrasenia))
+        cout << "Puedes pasar" << endl;
+    else
+        cout << "Error no puedes pasar";
+        return 0;
+}
