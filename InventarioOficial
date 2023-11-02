@@ -1,9 +1,25 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 const int MAX_PRODUCTOS = 100; // Máximo número de productos
+void cargarVentas(string productos[], double precios[], int cantidades[], double ventas[], int &n);
+void mostrarVentas(const string productos[], const double ventas[], int n);
+double calcularVentasTotales(const double ventas[], int n);
+int main() {
+    string productos[MAX_PRODUCTOS];
+    double precios[MAX_PRODUCTOS];
+    int cantidades[MAX_PRODUCTOS];
+    double ventas[MAX_PRODUCTOS];
+    int n = 0; // Número de productos ingresados
 
+    cargarVentas(productos, precios, cantidades, ventas, n);
+    mostrarVentas(productos, ventas, n);
+
+    double ventasTotales = calcularVentasTotales(ventas, n);
+    cout << "Ventas totales realizadas: $" << ventasTotales << endl;
+
+    return 0;
+}
 void cargarVentas(string productos[], double precios[], int cantidades[], double ventas[], int &n) {
     cout << "Ingrese el número de productos vendidos: ";
     cin >> n;
@@ -37,18 +53,3 @@ double calcularVentasTotales(const double ventas[], int n) {
     return total;
 }
 
-int main() {
-    string productos[MAX_PRODUCTOS];
-    double precios[MAX_PRODUCTOS];
-    int cantidades[MAX_PRODUCTOS];
-    double ventas[MAX_PRODUCTOS];
-    int n = 0; // Número de productos ingresados
-
-    cargarVentas(productos, precios, cantidades, ventas, n);
-    mostrarVentas(productos, ventas, n);
-
-    double ventasTotales = calcularVentasTotales(ventas, n);
-    cout << "Ventas totales realizadas: $" << ventasTotales << endl;
-
-    return 0;
-}
