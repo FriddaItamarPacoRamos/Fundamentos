@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+const int MAX_FILAS = 3;
+const int MAX_COLUMNAS = 3;
+void mostrarMatriz(int matriz[MAX_FILAS][MAX_COLUMNAS]);
+void calcularTraspuesta(int matriz[MAX_FILAS][MAX_COLUMNAS], int resultado[MAX_FILAS][MAX_COLUMNAS]);
+int main() {
+    int matrizOriginal[MAX_FILAS][MAX_COLUMNAS];
+    int matrizTraspuesta[MAX_FILAS][MAX_COLUMNAS];
+   cout << "Ingrese los elementos de la matriz " << MAX_FILAS << "x" << MAX_COLUMNAS << ":\n";
+    for (int i = 0; i < MAX_FILAS; ++i) {
+        for (int j = 0; j < MAX_COLUMNAS; ++j) {
+            cout << "Matriz[" << i << "][" << j << "]: ";
+            cin >> matrizOriginal[i][j];
+        }
+    }
+    int opcion;
+    do {
+        cout << "\nMenú:\n";
+        cout << "1. Calcular la traspuesta de la matriz\n";
+        cout << "2. Mostrar la matriz original\n";
+        cout << "3. Salir\n";
+        cout << "Seleccione una opción: ";
+        cin >> opcion;
+        switch (opcion) {
+            case 1:
+                calcularTraspuesta(matrizOriginal, matrizTraspuesta);
+                cout << "\nMatriz Traspuesta:\n";
+                mostrarMatriz(matrizTraspuesta);
+                break;
+            case 2:
+                cout << "\nMatriz Original:\n";
+                mostrarMatriz(matrizOriginal);
+                break;
+            case 3:
+                cout << "Saliendo del programa.\n";
+                break;
+            default:
+                cout << "Opción no válida. Inténtelo de nuevo.\n";
+                break;
+        }
+    } while (opcion != 3);
+    return 0;
+}
+void mostrarMatriz(int matriz[MAX_FILAS][MAX_COLUMNAS]) {
+    for (int i = 0; i < MAX_FILAS; ++i) {
+        for (int j = 0; j < MAX_COLUMNAS; ++j) {
+            cout << matriz[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
+void calcularTraspuesta(int matriz[MAX_FILAS][MAX_COLUMNAS], int resultado[MAX_FILAS][MAX_COLUMNAS]) {
+    for (int i = 0; i < MAX_FILAS; ++i) {
+        for (int j = 0; j < MAX_COLUMNAS; ++j) {
+            resultado[j][i] = matriz[i][j];
+        }
+    }
+}
